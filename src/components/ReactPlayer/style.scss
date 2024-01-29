@@ -1,0 +1,25 @@
+.main-rp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-player {
+  height: 100% !important;
+  video {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 749px) {
+  .main-rp {
+    padding: 0% 3%;
+  }
+}
+
+@media (max-width: 575px) {
+  .main-rp {
+    width: 100%;
+  }
+}
