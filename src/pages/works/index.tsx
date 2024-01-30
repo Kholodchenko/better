@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.scss';
+// import './style.scss';
 import { GoHorizontalRule } from "react-icons/go";
 import dynamic from 'next/dynamic';
 import HeadBlocks from '@/components/Header/mainPage/headBlocks';
@@ -13,19 +13,15 @@ export const metadata: Metadata = {
   description: "",
 };
 
-export default function Home() {
-  const MainPlayer = dynamic(() => import('../components/ReactPlayer/mainPlayer'), { ssr: false });
+export const WorkPage = () => {
+  // const MainPlayer = dynamic(() => import('../components/ReactPlayer/mainPlayer'), { ssr: false });
+  const MainPlayer = dynamic(() => import('../../components/ReactPlayer/mainPlayer'), {ssr: false});
 
   return (
     <div className='main-padding'>
-      <div className='main-title'>
-      архитектурное бюро, где каждая работа {<GoHorizontalRule />} <br/>
-      результат поиска <span className="highlighted">лучшего</span> решения
-      </div>
-      <MainPlayer />
-      <HeadBlocks />
-      <Services />
-      <Works />
+
     </div>
   );
 }
+
+export default WorkPage;
